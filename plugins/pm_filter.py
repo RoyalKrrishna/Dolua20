@@ -1,4 +1,4 @@
-# Kanged From @TroJanZheX
+# @Royalkrrishna
 import asyncio
 import re
 import ast
