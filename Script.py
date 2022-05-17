@@ -88,28 +88,28 @@ These are the extra features of Doluram 😉
 This module only works for my Admins
 
 <b>Commands and Usage</b>❗
-• /logs - To get the recent errors
+• /logs - To get the recent errors.
 • /stats - To get status of files in db.
-• /filter - Add manual filters
-• /filters - View filters
+• /filter - Add manual filters.
+• /filters - View filters.
 • /connect - Connect to PM.
-• /disconnect - Disconnect from PM
-• /del - Delete a filter
-• /delall - Delete all filters
-• /deleteall - Delete all index(autofilter)
+• /disconnect - Disconnect from PM.
+• /del - Delete a filter.
+• /delall - Delete all filters.
+• /deleteall - Delete all index(Autofilter)
 • /delete - Delete a specific file from index.
 • /users - To get list of my users and ids.
-• /chats - To get list of the my chats and ids 
-• /index  - To add files from a channel
+• /chats - To get list of the my chats and ids.
+• /index  - To add files from a channel.
 • /leave  - To leave from a chat.
 • /disable  - To disable a chat.
 • /enable - Re-enable chat.
 • /ban  - To ban a user.
 • /unban  - To unban a user.
-• /channel - To get list of total connected channels
-• /broadcast - To broadcast a message to all Doluram users
-• /batch - To create link for multiple posts
-• /link - To create link for one post"""
+• /channel - To get list of total connected channels.
+• /broadcast - To broadcast a message to all Doluram users.
+• /batch - To create link for multiple posts.
+• /link - To create link for one post."""
     STATUS_TXT = """★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
 ★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
 ★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
