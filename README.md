@@ -15,6 +15,7 @@
 - [x] IMDB
 - [x] Admin Commands
 - [x] Broadcast
+- [x] Auto Delete Feature
 - [x] Index
 - [x] IMDB search
 - [x] Inline Search
