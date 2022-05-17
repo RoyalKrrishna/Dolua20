@@ -46,15 +46,13 @@ Join [this](https://telegram.me/iPopcornMovieGroup) To Know About This Bot.
 ## Deploy
 You can deploy this bot anywhere.
 
-<i>**[Watch Deploying Tutorial...](https://youtu.be/1G1XwEOnxxo)**</i>
-
 ### Deploy To Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RoyalKrrishna/Doluram2.0)
 
-<details><summary>Deploy To VPS</summary>
+### Deploy To VPS
 <p>
 <pre>
-git clone https://github.com/EvamariaTG/evamaria
+git clone https://github.com/RoyalKrrishna/Doluram2.0
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
