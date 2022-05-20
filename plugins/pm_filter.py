@@ -830,8 +830,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("<b>I Couldn't Find Anything Related To That.\n\nPlease Check Your Spelling And Type Again.✅</b>")
-        await asyncio.sleep(8)
+        k = await msg.reply("<b>Sorry! Movie Is Not Available In My Database.☹️\n\nReason Is❓👇\n\n1 - Wrong Spelling 📌\n2 - Movie Not Released 📌\n3 - OTT or DVD Not Released 📌\n4 - Not Uploaded In My Database 📌\n\n👉 You Will Be Notified When Movie Is Available Please Be Patience.🙏🏻\n\nNote❗\nPlease Type Movie Name With Correct Spelling.🙏\nSearch In Google For Movie Name.🔍\n\n👉 Only Files @iPopcornMovieBot</b>")
+        await asyncio.sleep(20)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
@@ -842,7 +842,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("<b>Sorry, I Couldn't Find Your Movie.🔍\n\nPlease Check Your Spelling And Type Again.✅</b>",
+    await msg.reply("<b>Sorry, I Couldn't Find Your Movie.🔍\n\nPlease Check Your Spelling And Type Again.✅👇</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 async def manual_filters(client, message, text=False):
