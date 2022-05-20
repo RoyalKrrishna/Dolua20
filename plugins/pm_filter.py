@@ -199,8 +199,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('<b>Sorry This Movie Is Not Uploaded In My Database.☹️\n\nYou Will Be Notified When Movie Is Available.😗</b>')
-            await asyncio.sleep(10)
+            k = await query.message.edit('<b>Sorry! Movie Is Not Available In My Database.☹️\n\nReason Is❓👇\n\n1 - Wrong Spelling 📌\n2 - Movie Not Released 📌\n3 - OTT or DVD Not Released 📌\n4 - Not Uploaded In My Database 📌\n\n👉 You Will Be Notified When Movie Is Available Please Be Patience.🙏🏻\n\nNote❗\nPlease Type Movie Name With Correct Spelling.🙏\nSearch In Google For Movie Name.🔍\n\n👉 Only Files @iPopcornMovieBot</b>')
+            await asyncio.sleep(20)
             await k.delete()
 
 
