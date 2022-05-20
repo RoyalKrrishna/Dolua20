@@ -200,7 +200,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('<b>Sorry! Movie Is Not Available In My Database.☹️\n\nReason Is❓👇\n\n1 - Wrong Spelling 📌\n2 - Movie Not Released 📌\n3 - OTT, DVD Not Released 📌\n4 - Not Uploaded Here 📌\n\n👉 You Will Be Notified When Movie Is Available Please Be Patience.🙏🏻\n\nNote❗\nPlease Type Movie Name With Correct Spelling.🙏\nSearch In Google For Movie Name.🔍\n\n👉 Only Files @iPopcornMovieBot</b>')
-            await asyncio.sleep(30)
+            await asyncio.sleep(60)
             await k.delete()
 
 
@@ -831,7 +831,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("<b>Sorry! Movie Is Not Available In My Database.☹️\n\nReason Is❓👇\n\n1 - Wrong Spelling 📌\n2 - Movie Not Released 📌\n3 - OTT, DVD Not Released 📌\n4 - Not Uploaded 📌\n\n👉 You Will Be Notified When Movie Is Available Please Be Patience.🙏🏻\n\nNote❗\nPlease Type Movie Name With Correct Spelling.🙏\nSearch In Google For Movie Name.🔍\n\n👉 Only Files @iPopcornMovieBot</b>")
-        await asyncio.sleep(30)
+        await asyncio.sleep(60)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
