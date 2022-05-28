@@ -96,6 +96,8 @@ async def addfilter(client, message):
             reply_text = ""
             btn = "[]"
             alert = None
+            await asyncio.sleep(10)
+            await msg.delete()
     elif message.reply_to_message and message.reply_to_message.text:
         try:
             fileid = None
