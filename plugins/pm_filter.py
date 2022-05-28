@@ -72,6 +72,7 @@ async def give_filter(client,message):
                         if btn == "[]":
                             final_msg = await message.reply_text(reply_text, disable_web_page_preview=True)
                             await asyncio.sleep(30)
+                            await client.delete()
                             await final_msg.delete()
                         else:
                             button = eval(btn)
