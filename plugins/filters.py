@@ -81,8 +81,8 @@ async def addfilter(client, message):
                 reply_text = message.reply_to_message.text.html
                 fileid = None
             alert = None
-            await asyncio.sleep(30)
-            await rm.delete()
+                await asyncio.sleep(30)
+                await msg.delete()
         except:
             reply_text = ""
             btn = "[]" 
