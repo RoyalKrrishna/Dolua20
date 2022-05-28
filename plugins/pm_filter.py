@@ -51,7 +51,7 @@ async def fil_mod(client, message):
           await m.edit("**𝙰𝚄𝚃𝙾𝙵𝙸𝙻𝚃𝙴𝚁 𝙳𝙸𝚂𝙰𝙱𝙻𝙴𝙳**")
       else:
           await m.edit("𝚄𝚂𝙴 :- /autofilter on 𝙾𝚁 /autofilter off")
-
+            
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client,message):
     group_id = message.chat.id
@@ -70,30 +70,31 @@ async def give_filter(client,message):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await message.reply_text(reply_text, disable_web_page_preview=True)
+                            final_msg = await message.reply_text(reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                            await message.reply_text(
+                            final_msg = await message.reply_text(
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                     elif btn == "[]":
-                        await message.reply_cached_media(
+                        final_msg = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or ""
                         )
                     else:
-                        button = eval(btn) 
-                        await message.reply_cached_media(
+                        button = eval(btn)
+                        final_msg = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button)
                         )
                 except Exception as e:
                     print(e)
-                break 
-
+                break
+    await asyncio.sleep(30)
+    await final_msg.delete()
     else:
         if FILTER_MODE.get(str(message.chat.id)) == "False":
             return
