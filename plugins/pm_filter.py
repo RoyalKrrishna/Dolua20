@@ -856,7 +856,7 @@ async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
     await asyncio.sleep(60)
-    await async.delete()
+    await final_msg.delete()
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     keywords = await get_filters(group_id)
     for keyword in reversed(sorted(keywords, key=len)):
