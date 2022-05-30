@@ -870,7 +870,7 @@ async def manual_filters(client, message, text=False):
                     if fileid == "None":
                         if btn == "[]":
                             msg = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
-                            await asyncio.sleep(10)
+                            await asyncio.sleep(60)
                             await msg.delete()
                         else:
                             button = eval(btn)
