@@ -855,6 +855,8 @@ async def advantage_spell_chok(msg):
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
+    await asyncio.sleep(60)
+    await async.delete()
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     keywords = await get_filters(group_id)
     for keyword in reversed(sorted(keywords, key=len)):
@@ -879,8 +881,6 @@ async def manual_filters(client, message, text=False):
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
-                            await asyncio.sleep(60)
-                            await final_msg.delete()
                     elif btn == "[]":
                         await client.send_cached_media(
                             group_id,
@@ -888,8 +888,6 @@ async def manual_filters(client, message, text=False):
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(60)
-                        await final_msg.delete()
                     else:
                         button = eval(btn)
                         await message.reply_cached_media(
@@ -898,8 +896,6 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(60)
-                        await final_msg.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
