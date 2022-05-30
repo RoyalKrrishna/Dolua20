@@ -851,7 +851,7 @@ async def advantage_spell_chok(msg):
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     final_msg = await msg.reply("<b>Sorry, I Couldn't Find Your Movie.🔍\n\nPlease Check Your Spelling And Type Again.✅👇</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(30)
+    await asyncio.sleep(60)
     await final_msg.delete()
 
 async def manual_filters(client, message, text=False):
@@ -883,8 +883,6 @@ async def manual_filters(client, message, text=False):
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
-                            await asyncio.sleep(10)
-                            await msg.delete()
                     elif btn == "[]":
                         await client.send_cached_media(
                             group_id,
@@ -892,8 +890,6 @@ async def manual_filters(client, message, text=False):
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(10)
-                        await message.delete()
                     else:
                         button = eval(btn)
                         await message.reply_cached_media(
@@ -902,8 +898,6 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(10)
-                        await msg.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
