@@ -869,9 +869,6 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            msg = await message.reply_text(reply_text, disable_web_page_preview=True)
-                            await asyncio.sleep(10)
-                            await msg.delete()
                         else:
                             button = eval(btn)
                             await client.send_message(
