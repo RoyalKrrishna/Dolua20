@@ -47,7 +47,7 @@ Join [this](https://telegram.me/iPopcornMovieGroup) To Know About This Bot.
 You can deploy this bot anywhere.
 
 ### Deploy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RoyalKrrishna/Doluram2.0)
+
 
 ### Deploy To VPS
 <p>
