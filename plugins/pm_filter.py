@@ -72,7 +72,6 @@ async def give_filter(client,message):
                         if btn == "[]":
                             final_msg = await message.reply_text(reply_text, disable_web_page_preview=True)
                             await asyncio.sleep(60)
-                            await client.delete()
                             await final_msg.delete()
                         else:
                             button = eval(btn)
@@ -82,7 +81,6 @@ async def give_filter(client,message):
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                             await asyncio.sleep(60)
-                            await client.delete()
                             await final_msg.delete()
                     elif btn == "[]":
                         final_msg = await message.reply_cached_media(
@@ -90,7 +88,6 @@ async def give_filter(client,message):
                             caption=reply_text or ""
                         )
                         await asyncio.sleep(60)
-                        await client.delete()
                         await final_msg.delete()
                     else:
                         button = eval(btn)
@@ -100,7 +97,6 @@ async def give_filter(client,message):
                             reply_markup=InlineKeyboardMarkup(button)
                         )
                         await asyncio.sleep(60)
-                        await client.delete()
                         await final_msg.delete()
                 except Exception as e:
                     print(e)
