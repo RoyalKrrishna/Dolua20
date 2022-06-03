@@ -2,7 +2,7 @@
   <img src="assets/logo.jpg" alt="Doluram Logo">
 </p>
 <h1 align="center">
-  <b>Doluram</b>
+  <b>Dolua20</b>
 </h1>
 
 [![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/RoyalKrrishna/Doluram2.0/blob/main/LICENSE)
