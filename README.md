@@ -12,4 +12,4 @@ Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 <details><summary><b>Deploy to Heroku</b></summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/RoyalKrrishna/shareusWalaBot">
+<a href="https://heroku.com/deploy?template=https://github.com/RoyalKrrishna/Dolua20">
